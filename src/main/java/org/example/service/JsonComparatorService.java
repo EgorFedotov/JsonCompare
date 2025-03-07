@@ -1,11 +1,13 @@
 package org.example.service;
 
+import io.qameta.allure.Step;
 import org.example.dto.JsonDto;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class JsonComparatorService {
+    @Step("Сравниваем по очереди параметры: имя, возраст, хобби отсортированные по алфавиту")
     public static boolean areJsonDtoEqual(JsonDto dto1, JsonDto dto2) {
         if (!dto1.getName().equals(dto2.getName()))
             return false;
